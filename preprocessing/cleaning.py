@@ -101,7 +101,7 @@ def cleaning_dataset(dataframe):
     dataframe["host_response_rate"] = dataframe.host_response_rate.astype('category')
     dataframe["host_response_rate"] = dataframe.host_response_rate.apply(lambda c: re.sub('[%]','',c))
     dataframe["host_response_rate"] = SimpleImputer(strategy='median').fit_transform(dataframe[["host_response_rate"]])
-    print("Cleaning done.")
+    print("Cleaning eseguito.")
     return dataframe
 
 def main():
